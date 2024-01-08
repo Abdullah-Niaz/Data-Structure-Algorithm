@@ -7,7 +7,7 @@ Return_type function_name(param){
         5.---------
     }
 
-    -- Aditional 
+    --Aditional 
     else{
         -- Function Call Completed
     }
