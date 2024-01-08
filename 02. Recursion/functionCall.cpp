@@ -3,9 +3,10 @@ using namespace std;
 
 void fun(int n ){
     if(n > 0 ){
+        // Desending 
         printf("\n Values are: %d ", n);
         fun(n - 1);
-        printf("\n This part will be called after the tracing of recursive fun");
+        // Accending
         printf("\n Values are: %d ", n);
     }
     else{
