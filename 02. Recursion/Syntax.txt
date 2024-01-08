@@ -1,0 +1,21 @@
+Return_type function_name(param){
+    if(baseCondition){
+        1.---------
+        2.---------
+        3. function_name(param)
+        4.---------
+        5.---------
+    }
+
+    -- Aditional 
+    else{
+        -- Function Call Completed
+    }
+}
+
+void main(){
+    data_Type variable/object = Value/as_per_data_type;
+    
+    Call Your Function
+    function_name(variable/object);
+}
