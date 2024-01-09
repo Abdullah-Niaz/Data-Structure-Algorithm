@@ -16,8 +16,8 @@ int main()
     int val = 10;
     int result = fun(val);
     cout << "Value of Result is: " << result;
-    
-    val = 10;
+
+    val = 20;
     result = fun(val);
     cout << "Value of Result is: " << result;
     return 0;
