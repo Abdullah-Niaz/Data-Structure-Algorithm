@@ -10,7 +10,7 @@ void fun(int n ){
         printf("\n Values are: %d ", n);
     }
     else{
-        printf("\\Function Call Completed");
+        printf("\nFunction Call Completed");
     }
 };
 int main(){
