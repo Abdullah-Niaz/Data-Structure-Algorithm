@@ -5,7 +5,7 @@ int B(int n);
 
 
 int main(){
-    int val = 5;
+    int val = 20;
     int result = A(val);
     cout<<"\nResult is: "<<result;
     return 0;
