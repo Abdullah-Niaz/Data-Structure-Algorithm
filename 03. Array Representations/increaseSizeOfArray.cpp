@@ -2,44 +2,30 @@
 using namespace std;
 
 int main(){
-    //java 
-    // int n = new int[5];
-    // int ptrn = new int[10];
-
 
     // C++
-    int *p;
-    //  = new int[5];
-    int *ptr; 
-    // = new int[10];
+    int *p = new int[5];
+    p[0] = 10;
+    p[1] = 20;
+    p[2] = 30;
+    p[3] = 40;
+    p[4] = 50;
 
-    // C
-    p = (int *)(malloc(5 * sizeof(int)));
-    ptr = (int *)(malloc(10 * sizeof(int)));
-
-
-    cout<<"Enter the Five Element: ";
-    for (int i = 0; i < 5; i++)
-    {
-        cin>>p[i];
-    }
+    int *ptr = new int[10];
 
     for (int i = 0; i < 5; i++)
     {
         ptr[i] = p[i];
     }
-    
+
+    p = NULL;
+    p = ptr;
+    ptr = NULL;
+
     for (int i = 0; i < 10; i++)
     {
-        if(i == 5 ){
-            cout<<"Now, you will get dumy values";
-            // return 0;
-        }
-        cout<<p[i]<<endl;
+        cout << p[i] << endl;
     }
-    p = ptr;
-    ptr = nullptr;
-    
-    
+
     return 0;
 }
