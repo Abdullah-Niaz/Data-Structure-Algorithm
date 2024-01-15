@@ -57,8 +57,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Open Source/Data-Structure-Algorithm/02. Recursion/Problems",
-      "program": "d:/Open Source/Data-Structure-Algorithm/02. Recursion/Problems/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
