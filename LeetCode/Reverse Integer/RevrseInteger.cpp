@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int reverseString(){
+int reverseInteger(){
     int n = 356;
     int ans = 0;
     while (n != 0)
@@ -22,7 +22,7 @@ int reverseString(){
 
 
 int main(){
-   int res = reverseString();
+   int res = reverseInteger();
    cout<<res;
     return 0;
 }
