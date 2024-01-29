@@ -2,55 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Code Runner - C++",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "cppbuild"
-    },
-    {
-      "name": "Code Runner - JavaScript",
-      "type": "node",
-      "request": "launch",
-      "program": "${file}",
-      "runtimeArgs": [],
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      "console": "internalConsole"
-    },
-    {
-      "name": "Code Runner - Python",
-      "type": "python",
-      "request": "launch",
-      "program": "${file}",
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      "env": {},
-      "console": "internalConsole"
-    },
-    {
-      "name": "Code Runner - Java",
-      "type": "java",
-      "request": "launch",
-      "mainClass": "${fileBasenameNoExtension}",
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      "console": "internalConsole"
-    },
-    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
