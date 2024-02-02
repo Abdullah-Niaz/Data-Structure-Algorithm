@@ -6,6 +6,16 @@ struct Node
     int data;
     struct Node *next;
 };
+
+int add(struct Node *ptr){
+    int count = 0;
+    while (ptr != NULL)
+    {
+        count++;
+        ptr = ptr->next;
+    }
+    return count;
+};
 void Display(struct Node *ptr)
 {
     int count = 0 ;
@@ -40,5 +50,7 @@ int main()
     fourth->next = NULL;
 
     Display(head);
+    int c = add(head);
+    cout<<"Count is: "<<c;
     return 0;
 }
