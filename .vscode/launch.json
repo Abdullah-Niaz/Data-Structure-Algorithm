@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "insert",
+      "request": "launch",
+      "mainClass": "insert",
+      "projectName": "Data-Structure-Algorithm_7a81e569"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
