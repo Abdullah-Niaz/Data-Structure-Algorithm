@@ -67,7 +67,6 @@ int main(){
     third->data = 50;
     third->next = NULL;
 
-
     cout<<"\nCase 1: Insertion At Start:/n";
     cout<<"\nBefore: \n";
     Traversing(head);
@@ -88,8 +87,6 @@ int main(){
     head = insertAtEnd(head,60);
     cout<<"\nAfter: \n";
     Traversing(head);
- 
- 
- 
+
     return 0;
 }
