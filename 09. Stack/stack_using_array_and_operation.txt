@@ -1,0 +1,12 @@
+Stack: is used to store elements using the principle LIFO(Last In First Out) OR TOS(Top of Stack)
+Stack can be  implemented through array and linked list only.
+
+Operation:
+1. Creating stack using array
+2. Pushing Elements into stack 
+3. Displaying Elements from Stack
+4. Poping up elements from stack 
+5. Peak mean searching for elements in array 
+6. is Empty to check whether the stack is empty or not 
+7. is Full to check whether the stack is Full  or not
+8. Top Stack Element of Stack
