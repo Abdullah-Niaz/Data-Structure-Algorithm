@@ -64,6 +64,20 @@ int peak(struct stack *st,int position){
     return x;
 }
 
+int isEmpty(struct stack st){
+    if(st.top == - 1){
+        return 1;
+    }
+    return 0;
+};
+
+int isFull(struct stack st){
+    if(st.top == st.size -1){
+        return 1;
+    }
+    return 0;
+};
+
 int main(){
     struct stack st;
     create(&st);
