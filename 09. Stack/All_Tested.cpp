@@ -78,19 +78,54 @@ int isFull(struct stack st){
     return 0;
 };
 
+int stactTop(struct stack st){
+    if(st.top  == -1){
+        return -1;
+    }
+    else{
+        return st.s[st.top];
+    }
+};
 
 int main(){
+    
+    // structure object 
     struct stack st;
+
+    // creating a stack of particulare size dynamically
     create(&st);
+
+    //Pushing all the elements in stack
     push(&st,10);
     push(&st,50);
     push(&st,60);
     push(&st,70);
     push(&st,80);
+
+    // Displaying all the elements from stack 
     display(st);
+
+    // Poping up the value form stack 
     int returned_pop = pop(&st);
     cout<<"Poped Value is : "<<returned_pop<<endl;
+
+    // looking for value at a particular index 
     int is_returned_index = peak(&st,4);
-    cout<<"Position of the Searched Element is : "<< is_returned_index;
+    cout<<"Position of the Searched Element is : "<< is_returned_index<<endl;
+
+    cout<<"=============="<<endl;
+    
+    //stack is empty or not
+    int is_empty = isEmpty(st);
+    cout<<"Stack is Empty: "<<is_empty<<endl;
+
+    // Stack is full or not
+    int is_full = isFull(st);
+    cout<<"Stack is Full: "<<isFull<<endl;
+
+    //Stack Top   
+    int top_loc = stactTop(st);
+    cout<<"Stack Top: "<<top_loc<<endl;
+ 
     return 0;
 }
