@@ -78,6 +78,7 @@ int isFull(struct stack st){
     return 0;
 };
 
+
 int main(){
     struct stack st;
     create(&st);
