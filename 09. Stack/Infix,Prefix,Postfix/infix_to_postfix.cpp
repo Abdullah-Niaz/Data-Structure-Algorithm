@@ -70,7 +70,7 @@ string infixToPostfix(const string& infix) {
     create(&stack, infix.length());  // Create a stack with size equal to length of infix expression
 
     string postfix = "";  // Initialize postfix expression string
-        //  "a+b*c-d^e"
+    //  "a+b*c-d^e"
     // abc
     //   abc*+de*-
     for (char c : infix) {
@@ -104,7 +104,7 @@ string infixToPostfix(const string& infix) {
 
 int main() {
     // a + b * c - d ^ e
-    string infix_expression = "a+b*c+d^e";  // Example infix expression
+    string infix_expression = "K+L-M*N+(O^P)*W/U/V*T+Q";  // Example infix expression
        // abc*+de^-
     //    a+b*c-d/e
     //    kl+mn*-op^w*u/v/t*+q+
