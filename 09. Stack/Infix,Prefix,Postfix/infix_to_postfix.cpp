@@ -104,8 +104,9 @@ string infixToPostfix(const string& infix) {
 
 int main() {
     // a + b * c - d ^ e
-    string infix_expression = "k+l-m*n+(o^p)*w/u/v*t+q";  // Example infix expression
+    string infix_expression = "a+b*c+d^e";  // Example infix expression
        // abc*+de^-
+    //    a+b*c-d/e
     //    kl+mn*-op^w*u/v/t*+q+
     string postfix_expression = infixToPostfix(infix_expression);  // Convert infix to postfix
 
