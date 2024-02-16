@@ -104,10 +104,12 @@ string infixToPostfix(const string& infix) {
 
 int main() {
     // a + b * c - d ^ e
-    string infix_expression = "K+L-M*N+(O^P)*W/U/V*T+Q";  // Example infix expression
-       // abc*+de^-
-    //    a+b*c-d/e
-    //    kl+mn*-op^w*u/v/t*+q+
+    string infix_expression = "";  // Example infix expression
+    // Test Cases
+    // K+L-M*N+(O^P)*W/U/V*T+Q
+    // abc*+de^-
+    // a+b*c-d/e
+    // kl+mn*-op^w*u/v/t*+q+
     string postfix_expression = infixToPostfix(infix_expression);  // Convert infix to postfix
 
     cout << "Infix Expression: " << infix_expression << endl;
