@@ -64,19 +64,25 @@ int precedence(char op) {
     return 0;  // Default precedence
 };
 
+// Function to reverse a string
+string reverseString(const string& str) {
+    string reversedStr = "";
+    for (int i = str.length() - 1; i >= 0; i--) {
+        reversedStr += str[i];
+    }
+    return reversedStr;
+}
+
 // Function to convert infix expression to postfix
 string infixToPostfix(const string& infix) {
     Stack stack;
     create(&stack, infix.length());  // Create a stack with size equal to length of infix expression
 
     string postfix = "";  // Initialize postfix expression string
-    //  "a+b*c-d^e"
-    // abc
-    //   abc*+de*-
+
     for (char c : infix) {
         if (isalnum(c)) {  // If character is operand, add it to postfix string
             postfix += c;
-              // abc*+de
         } else if (c == '(') {  // If character is opening parenthesis, push it onto stack
             push(&stack, c);
         } else if (c == ')') {  // If character is closing parenthesis, pop operators from stack until matching '(' is found
@@ -86,7 +92,6 @@ string infixToPostfix(const string& infix) {
             pop(&stack);  // Remove '(' from stack
         } else {  // If character is operator
             while (!isEmpty(&stack) && precedence(c) <= precedence(peek(&stack))) {
-                 // abc*+de
                 postfix += pop(&stack);  // Pop operators with higher or equal precedence from stack and add them to postfix string
             }
             push(&stack, c);  // Push current operator onto stack
@@ -96,24 +101,74 @@ string infixToPostfix(const string& infix) {
     // Pop remaining operators from stack to postfix
     while (!isEmpty(&stack)) {
         postfix += pop(&stack);
-        // abc*+de^-
     }
 
     return postfix;  // Return the postfix expression
 }
 
+// Function to convert infix expression to prefix
+string infixToPrefix(const string& infix) {
+    string reversedInfix = reverseString(infix);  // Reverse the infix expression
+    string modifiedInfix = "";  // Initialize modified infix expression string
+
+    // Modify the operators
+    for (char c : reversedInfix) {
+        if (c == '(') {
+            modifiedInfix += ')';
+        } else if (c == ')') {
+            modifiedInfix += '(';
+        } else {
+            modifiedInfix += c;
+        }
+    }
+
+    Stack stack;
+    create(&stack, modifiedInfix.length());  // Create a stack with size equal to length of modified infix expression
+
+    string postfix = "";  // Initialize postfix expression string
+
+    // Convert modified infix expression to postfix
+    for (char c : modifiedInfix) {
+        if (isalnum(c)) {  // If character is operand, add it to postfix string
+            postfix += c;
+        } else if (c == '(') {  // If character is opening parenthesis, push it onto stack
+            push(&stack, c);
+        } else if (c == ')') {  // If character is closing parenthesis, pop operators from stack until matching '(' is found
+            while (!isEmpty(&stack) && peek(&stack) != '(') {
+                postfix += pop(&stack);
+            }
+            pop(&stack);  // Remove '(' from stack
+        } else {  // If character is operator
+            while (!isEmpty(&stack) && precedence(c) <= precedence(peek(&stack))) {
+                postfix += pop(&stack);  // Pop operators with higher or equal precedence from stack and add them to postfix string
+            }
+            push(&stack, c);  // Push current operator onto stack
+        }
+    }
+
+    // Pop remaining operators from stack to postfix
+    while (!isEmpty(&stack)) {
+        postfix += pop(&stack);
+    }
+
+    // Reverse the postfix expression to obtain the prefix expression
+    string prefix = reverseString(postfix);
+
+    return prefix;  // Return the prefix expression
+}
+
 int main() {
-    // a + b * c - d ^ e
     string infix_expression = "k+l-m*n+(o^p)*w/u/v*t+q";  // Example infix expression
-    // Test Cases
-    // K+L-M*N+(O^P)*W/U/V*T+Q
-    // abc*+de^-
-    // a+b*c-d/e
-    // kl+mn*-op^w*u/v/t*+q+
-    string postfix_expression = infixToPostfix(infix_expression);  // Convert infix to postfix
+
+    // Convert infix to postfix
+    string postfix_expression = infixToPostfix(infix_expression);
+
+    // Convert infix to prefix
+    string prefix_expression = infixToPrefix(infix_expression);
 
     cout << "Infix Expression: " << infix_expression << endl;
     cout << "Postfix Expression: " << postfix_expression << endl;
+    cout << "Prefix Expression: " << prefix_expression << endl;
 
     return 0;
 }
