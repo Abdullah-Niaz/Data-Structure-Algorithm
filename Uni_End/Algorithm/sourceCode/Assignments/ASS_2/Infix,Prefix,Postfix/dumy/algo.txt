@@ -1,0 +1,40 @@
+Algorithm InfixToPostfix(infixExpression)
+    Input: infixExpression - a string representing an infix expression
+    Output: postfixExpression - a string representing the equivalent postfix expression
+
+    Create an empty stack to store operators
+    postfixExpression = "" // Initialize an empty string to store the postfix expression
+
+    // Define a function to determine the precedence of operators
+    Function precedence(op)
+        if op is '+' or '-'
+            return 1
+        else if op is '*' or '/'
+            return 2
+        else if op is '^' // Exponentiation operator has highest precedence
+            return 3
+        else
+            return 0 // Default precedence for other characters
+    
+    // Iterate through each character in the infix expression
+    for each character c in infixExpression do
+        if c is an operand then
+            Append c to postfixExpression
+        else if c is '(' then
+            Push c onto the stack
+        else if c is ')' then
+            // Pop operators from the stack and append to postfixExpression until '(' is encountered
+            while the top element of the stack is not '(' do
+                Pop an operator from the stack and append to postfixExpression
+            Pop '(' from the stack // Remove the '(' from the stack
+        else // c is an operator
+            // While the stack is not empty and the precedence of c is less than or equal to the precedence of the top element of the stack
+            while the stack is not empty and precedence(c) <= precedence(top of stack) do
+                Pop an operator from the stack and append to postfixExpression
+            Push c onto the stack
+        
+    // Pop remaining operators from the stack and append to postfixExpression
+    while the stack is not empty do
+        Pop an operator from the stack and append to postfixExpression
+    
+    Return postfixExpression
