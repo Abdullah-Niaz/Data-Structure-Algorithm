@@ -9,6 +9,7 @@ struct Stack {
     int top;   // Top pointer of the stack
     char *s;   // Character array to store stack elements
 };
+
 // Function to create a stack with the specified size
 void create(struct Stack *st, int size) {
     st->size = size;  // Set the size of the stack (which passed as length from infixtopostfix function)
