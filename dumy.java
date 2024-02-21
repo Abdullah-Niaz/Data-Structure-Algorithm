@@ -15,6 +15,7 @@ class totyta implements car{
 
 public class dumy{
     public static void main(String[] args) {
-        
+        totyta t_c   = new totyta();
+        t_c.carengine();
     }
 }

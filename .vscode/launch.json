@@ -1,7 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
+    {
+      "type": "java",
+      "name": "dumy",
+      "request": "launch",
+      "mainClass": "dumy",
+      "projectName": "Data-Structure-Algorithm_7a81e569"
+    },
     {
       "type": "java",
       "name": "insert",
