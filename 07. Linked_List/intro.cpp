@@ -22,12 +22,23 @@ void TraversalLinkedList(struct Node *ptr){
 
 int main(){
     struct Node *first, *second,*third,*fourth,*fifth,*sixth;
+
+    // in c 
     first=  (struct Node * )(malloc(sizeof(struct Node)));
     second = (struct Node * )(malloc(sizeof(struct Node)));
     third = (struct Node * )(malloc(sizeof(struct Node)));
     fourth = (struct Node * )(malloc(sizeof(struct Node)));
     fifth = (struct Node * )(malloc(sizeof(struct Node)));
     sixth = (struct Node * )(malloc(sizeof(struct Node)));
+
+
+    // in c++
+    // first = new Node;
+    // second = new Node;
+    // third = new Node;
+    // fourth = new Node;
+    // fifth = new Node;
+    // sixth = new Node;
 
     // Pointer First
     first->data = 8;
