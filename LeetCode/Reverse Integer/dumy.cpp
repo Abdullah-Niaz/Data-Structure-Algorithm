@@ -2,7 +2,8 @@
 using namespace std;
 
 int main(){
-    int a = 5, b = 10, c = 15, d = 20;
+    int a,b,c,d;
+    cout<<"Enter a,b,c,d: "
     if( a  > b || a > c || a > d){
         cout<<"A is Greater : "<<a <<endl;
     }
