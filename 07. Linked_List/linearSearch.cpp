@@ -7,6 +7,14 @@ struct Node
     struct Node *next;
 };
 
+void Display(struct Node *ptr){
+    while (ptr != NULL)
+    {
+        cout<<ptr->data<<" with Addres: "<< ptr->next<<endl;
+    ptr = ptr->next;
+    }
+};
+
 Node * linearSearch(struct Node *ptr, int key)
 {
     while (ptr != NULL)
@@ -42,6 +50,7 @@ int main()
     fourth->data = 80;
     fourth->next = NULL;
 
+    Display(head);
     struct Node *temp = linearSearch(head,40);
     cout<<"Key found at: "<<temp;
 
