@@ -69,7 +69,45 @@ public:
         }
         return NULL;
     }
+
+    Node * InsertStart(struct Node *ptr, int data){
+    struct Node *p = new Node;
+    p->data = data;
+    p->next = ptr;
+    // display(p);
+    return p;
+    }
+
+    Node *Insertbetween(struct Node *head, int data, int index){
+        struct Node *ptr = new Node;
+        struct Node *p = head;
+        int i = 0 ;
+        while (i != index - 1)
+        {
+            p = p->next;
+            i++;
+        }
+        ptr->data = data;
+        ptr->next = p->next;
+        p->next = ptr;
+        return head;
+        
+    }
+
+    Node *InsertionEnd(struct Node *head,int data){
+        struct Node *ptr = new Node;
+        struct Node *p = head;
+        while (p->next != NULL)
+        {
+            p = p->next;
+        }
+        p->next = ptr;
+        ptr->next = NULL;
+        ptr->data = data;
+        return head;
+    }
 };
+
 
 int main()
 {
@@ -84,6 +122,10 @@ int main()
     first->next = second;
     second->data = 30;
     second->next = NULL;
+
+    head = head->InsertStart(head,5);
+    head = head->Insertbetween(head,25,3);
+    head = head->InsertionEnd(head,40);
 
     cout << "Displayling Elements of Linked list whole" << endl;
     head->display(head);
