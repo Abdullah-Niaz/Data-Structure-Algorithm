@@ -69,6 +69,43 @@ Node *linearSearch(Node *ptr, int key)
     return NULL;
 }
 
+
+// Insertion Operations
+
+Node * InsertStart(struct Node *ptr, int data){
+    struct Node *p = new Node;
+    p->data = data;
+    p->next = ptr;
+    return p;
+};
+
+Node *Insertbetween(struct Node *head, int data, int index){
+        struct Node *ptr = new Node;
+        struct Node *p = head;
+        int i = 0 ;
+        while (i != index - 1)
+        {
+            p = p->next;
+            i++;
+        }
+        ptr->data = data;
+        ptr->next = p->next;
+        p->next = ptr;
+        return head;
+        
+};
+Node *InsertionEnd(struct Node *head,int data){
+        struct Node *ptr = new Node;
+        struct Node *p = head;
+        while (p->next != NULL)
+        {
+            p = p->next;
+        }
+        p->next = ptr;
+        ptr->next = NULL;
+        ptr->data = data;
+        return head;
+};
 int main()
 {
     Node *head, *first, *second;
@@ -82,6 +119,11 @@ int main()
     first->next = second;
     second->data = 30;
     second->next = NULL;
+
+    head = InsertStart(head,5);
+    head = Insertbetween(head,25,3);
+    head = InsertionEnd(head,40);
+
 
     cout << "Displayling Elements of Linked list whole" << endl;
     display(head);
@@ -97,6 +139,8 @@ int main()
 
     cout << "Linear Search" << endl;
     Node *r = linearSearch(head, 20);
-    // cout << r;
+
+
+   
     return 0;
 }
