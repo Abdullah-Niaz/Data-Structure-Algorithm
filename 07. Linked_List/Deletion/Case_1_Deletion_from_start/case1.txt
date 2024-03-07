@@ -1,0 +1,11 @@
+first delete the node 
+and move the head to the next node
+then free up the space of deleted node
+
+struct Node *ptr  = head // now ptr and head are at same location
+head = head->next // move the head to the next location
+free(ptr) // free up the space of that pointer
+
+
+
+Time Complexity -> Q(1)
