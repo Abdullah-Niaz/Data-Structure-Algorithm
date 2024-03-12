@@ -61,7 +61,7 @@ int main() {
     fourth1->data = 140;
     fourth1->next = NULL;
 
-    display(head);
+    // display(head);
     concatenation(head, head1);
     display(head);
 
