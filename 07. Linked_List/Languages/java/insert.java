@@ -37,25 +37,5 @@ public class insert{
     head = head.insertAtFirst(head, 8);
     head.TraverseLinkedList(head);
 
-    // TraverseLinkedList(head);
-    // head = insertAtFirst(head, 6);
-    // TraverseLinkedList(head);
-
-    // TraverseLinkedList(head);
-    // head = insertAtFirst(head, 4);
-    // TraverseLinkedList(head);
-
-    // TraverseLinkedList(head);
-    // head = insertAtFirst(head, 3);
-    // TraverseLinkedList(head);
-
-    // TraverseLinkedList(head);
-    // head = insertAtFirst(head, 2);
-    // TraverseLinkedList(head);
-
-    // TraverseLinkedList(head);
-    // head = insertAtFirst(head, 1);
-    // TraverseLinkedList(head);
-
     }
 }
