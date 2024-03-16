@@ -12,7 +12,7 @@ public:
     {
         while (ptr != NULL)
         {
-            cout << ptr->data << endl;
+            cout <<"Data-item: "<<ptr->data << endl;
             cout << "Location: " << ptr->next << endl;
             ptr = ptr->next;
         }
@@ -106,6 +106,18 @@ public:
         ptr->data = data;
         return head;
     }
+
+    void menu(){
+        cout << "1. Display: "<< endl;
+        cout << "2. Sum: "<< endl;
+        cout << "3. Count: "<< endl;
+        cout << "4. Maximum: "<< endl;
+        cout << "5. Linear Search: "<< endl;
+        cout << "6. Insertion at Start: "<< endl;
+        cout << "7. Insertion between(index): "<< endl;
+        cout << "8. Insertion at End: "<< endl;
+        cout << "9. Exit: "<< endl;
+    }
 };
 
 
@@ -123,24 +135,51 @@ int main()
     second->data = 30;
     second->next = NULL;
 
-    head = head->InsertStart(head,5);
-    head = head->Insertbetween(head,25,3);
-    head = head->InsertionEnd(head,40);
+    head->menu();
+    int n;
+    cout << "Enter the Select Option: ";
+    cin >> n;
+    while (n != 9)
+    {
+        switch (n)
+        {
+        case 1:
+            head->display(head);
+            break;
+        case 2:
+            cout << "Sum of Linked List: " << head->Sum(head) << endl;
+            break;
+        case 3:
+            cout << "Count of Linked List: " << head->Count(head) << endl;
+            break;
+        case 4:
+            cout << "Max of Linked List: " << head->Max_li(head) << endl;
+            break;
+        case 5:
+            head->linearSearch(head, 20);
+            break;
+        case 6:
+            head = head->InsertStart(head, 4);
+            break;
+        case 7:
+            head = head->Insertbetween(head, 1, 2);
+            break;
+        case 8:
+            head = head->InsertionEnd(head, 50);
+            break;
+        default:
+            cout << "Invalid option. Please enter a valid option." << endl;
+            break;
+        }
+        head->menu(); // Display menu again
+        cout << "Enter the Select Option: ";
+        cin >> n;
+    }
 
-    cout << "Displayling Elements of Linked list whole" << endl;
-    head->display(head);
+    // Delete allocated memory
+    delete head;
+    delete first;
+    delete second;
 
-    int sum = head->Sum(head);
-    cout<<"Sum of Linked List: "<<sum<<endl;
-
-    int count = head->Count(head);
-    cout<<"Count of Linked List: "<<count<<endl;
-
-    int max = head->Max_li(head);
-    cout<<"Max of Linked List: "<<max<<endl;
-
-    cout << "Linear Search" << endl;
-    Node *r = head->linearSearch(head, 20);
-    // cout << r;
     return 0;
 }
