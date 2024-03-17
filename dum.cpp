@@ -8,8 +8,7 @@ string infixToPostfix(const string& infix) {
             postfix += c;
               // abc*+de
         } else if (c == '(') {
-            push(&stack, c);
-            
+            push(&stack, c); // push that bracket inside the stack
         } else if (c == ')') { 
             while (!isEmpty(&stack) && peek(&stack) != '(') {
                 postfix += pop(&stack);
