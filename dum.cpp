@@ -10,7 +10,7 @@ string infixToPostfix(const string& infix) {
         } else if (c == '(') {
             push(&stack, c); // push that bracket inside the stack
         } else if (c == ')') { 
-            while (!isEmpty(&stack) && peek(&stack) != '(') {
+            while (!isEmpty(&stack) && peek(&stack) != '(') { // it will check the previous opening braacket and print the operators inside the opening and closing bracket 
                 postfix += pop(&stack);
             }
             pop(&stack);
