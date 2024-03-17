@@ -9,6 +9,7 @@ string infixToPostfix(const string& infix) {
               // abc*+de
         } else if (c == '(') {
             push(&stack, c);
+            
         } else if (c == ')') { 
             while (!isEmpty(&stack) && peek(&stack) != '(') {
                 postfix += pop(&stack);
