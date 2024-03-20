@@ -10,7 +10,7 @@ public class code {
                 j--; // j = 0 - 1 => -1 // if negative while loop will become false
             }
             arr[j + 1] = key; // j = 0 => arr[0 + 1 ] = 11
-        }
+        } 
     };
 
     public static void main(String[] args) {
