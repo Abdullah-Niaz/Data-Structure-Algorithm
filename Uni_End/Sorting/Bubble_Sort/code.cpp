@@ -31,7 +31,7 @@ void bubbleSort(int arr[], int n)
 
 int main()
 {
-    int arr[] = {64, 25, 23,300, 200, 600, 12, 22, 11};
+    int arr[] = {64, 25, 23,300, 200, 600, 12, 22, 11,2,3,1,15,15};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Original array: ";
