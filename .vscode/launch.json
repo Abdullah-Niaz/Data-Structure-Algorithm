@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "dd",
+      "request": "launch",
+      "mainClass": "dd",
+      "projectName": "Data-Structure-Algorithm_7a81e569"
+    },
+    {
+      "type": "java",
       "name": "insert",
       "request": "launch",
       "mainClass": "java.insert",
