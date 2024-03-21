@@ -1,5 +1,5 @@
 
-public class code {
+public class mainFile {
     void insertionSort(int arr[], int n) {
         for (int i = 1; i < n; i++) {
             // int arr[] = {12, 11, 10, 9 , 8 , 4, 3, 2, 1};
@@ -17,10 +17,10 @@ public class code {
 
         int arr[] = { 12, 11, 10, 9, 8, 4, 3, 2, 1 };
         int n = 9;
-        code c = new code();
+        mainFile c = new mainFile();
         c.insertionSort(arr, n);
         for (int i = 0; i < n; i++) {
-            System.out.println(arr[i]); // print array elements
+            System.out.print(arr[i] + " ----- "); // print array elements
         }
 
     }
