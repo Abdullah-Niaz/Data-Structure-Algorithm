@@ -6,7 +6,7 @@ struct Node
     int data;
     struct Node *next;
 };
-
+ 
 Node *insertAtEnd(struct Node *head, int data)
 {
     struct Node *ptr = (struct Node *)(malloc(sizeof(struct Node *)));
