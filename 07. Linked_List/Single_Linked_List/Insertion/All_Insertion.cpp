@@ -17,7 +17,6 @@ struct Node * insertAtStart(struct Node *head,int data){
 struct Node * insertBetween(struct Node *head,int data, int index){
     Node *ptr = new Node;
     Node *p = head;
-
     int i = 0 ;
     while (i != index -1 )
     {
