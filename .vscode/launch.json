@@ -1,52 +1,25 @@
 {
   "version": "0.2.0",
   "configurations": [
-    {
-      "type": "java",
-      "name": "dd",
-      "request": "launch",
-      "mainClass": "dd",
-      "projectName": "Data-Structure-Algorithm_7a81e569"
-    },
-    {
-      "type": "java",
-      "name": "insert",
-      "request": "launch",
-      "mainClass": "java.insert",
-      "projectName": "Data-Structure-Algorithm_7a81e569"
-    },
-    {
-      "type": "java",
-      "name": "dumy",
-      "request": "launch",
-      "mainClass": "dumy",
-      "projectName": "Data-Structure-Algorithm_7a81e569"
-    },
-    {
-      "type": "java",
-      "name": "insert",
-      "request": "launch",
-      "mainClass": "insert",
-      "projectName": "Data-Structure-Algorithm_7a81e569"
-    },
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
-    }
+      {
+          "name": "C++ Debug",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": true,
+          "MIMode": "gdb",
+          "setupCommands": [
+              {
+                  "description": "Enable pretty-printing for gdb",
+                  "text": "-enable-pretty-printing",
+                  "ignoreFailures": true
+              }
+          ],
+          "preLaunchTask": "build"
+      }
   ]
 }
