@@ -1,0 +1,7 @@
+Let say you have two files inside one package
+
+javac -g package/*.java
+jdb package.mainClass
+
+Break in java
+	stop in package.file1:10
