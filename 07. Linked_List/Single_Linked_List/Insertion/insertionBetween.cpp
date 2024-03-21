@@ -5,7 +5,7 @@ struct Node
 {
     int data;
     struct Node *next;
-};
+}; 
 
 void TraverseLinkedList(struct Node *ptr)
 {
