@@ -167,8 +167,19 @@ int main() {
     string prefix_expression = infixToPrefix(infix_expression);
 
     cout << "Infix Expression: " << infix_expression << endl;
+    cout<<"\n===========================\n";
     cout << "Postfix Expression: " << postfix_expression << endl;
+    for (int i = 0; i < postfix_expression.size(); i++)
+    {
+        cout<<postfix_expression[i]<<" ";
+    }
+    cout<<"\n===========================\n";
     cout << "Prefix Expression: " << prefix_expression << endl;
+    for (int i = 0; i < prefix_expression.size(); i++)
+    {
+        cout<<prefix_expression[i]<<" ";
+    }
+    
 
     return 0;
 }
