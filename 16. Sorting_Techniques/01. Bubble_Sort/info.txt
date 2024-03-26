@@ -1,0 +1,12 @@
+[3,4,2,10,7, 6, 15]
+
+* let say you have and array of  few element you want to swap them using buble sort
+* let's recall it, what is bubble sort, have you ever seen, when you throw a stone into water
+    it goes to the bed/end of earth and bubble up water drop at that place where you droped that 
+    stone. ( create hole over there)
+
+* Another example is: you have a few pieces wood of some different size, one is placed on another, 
+    Whenever you will pick up the top one. Remaining wood  will be pushed up and continues. Until the pieces are sorted in order of their sizes.
+
+
+One element will be compared with the hole, if that that is the most  biggest then they are swapped otherwise not.
