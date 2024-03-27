@@ -24,7 +24,8 @@ void Selection(int A[], int n){
 int main(){
     int A[] = {8,3,5,8,4,2,7};
     int n = sizeof(A) / sizeof(A[0]);
-
+    cout<<n;
+    cout<<"sizeof "<<sizeof(A);
     cout<<"\nUnsorted Array: ";
     for (int i = 0; i < n; i++)
     {
