@@ -34,6 +34,7 @@ void QuickSort( int A[] , int l , int h ){
     int j;
     if ( l < h ){
         j = partition(A, l, h);
+        // It then recursively calls QuickSort for the sub-array to the left of the pivot (from l to j), and for the sub-array to the right of the pivot (from j+1 to h).
         QuickSort(A,l,j);
         QuickSort(A,j+1,h);
     }
