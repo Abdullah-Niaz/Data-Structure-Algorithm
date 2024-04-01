@@ -52,8 +52,8 @@ void CountSort(int A[], int n)
 int main()
 {
     int A[] = {1, 3, 45, 2, 4, 6, 6, 7, 2, 8, 12, 44};
-    int n = sizeof(A) / sizeof(A[0]);
-    
+    int n = sizeof(A) / sizeof(A[0]); 
+
     cout << "\nUnsorted Array: ";
     for (int i = 0; i < n; i++)
     {
