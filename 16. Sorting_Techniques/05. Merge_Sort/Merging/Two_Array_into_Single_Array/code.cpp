@@ -8,7 +8,9 @@ void merging(int A[], int B[], int C[], int m, int n)
     {
         if (A[i] < B[j])
         {
-            C[k++] = A[i++];
+            C[k] = A[i];
+            k++
+            i++;
         }
         else
         {
