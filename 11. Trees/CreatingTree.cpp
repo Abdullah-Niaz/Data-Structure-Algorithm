@@ -99,6 +99,7 @@ void createTree()
     root->data = x;
     root->lchild = nullptr;
     root->rchild = nullptr;
+    
     q.enqueue(root);
 
     while (!q.isEmpty())
@@ -117,7 +118,7 @@ void createTree()
             q.enqueue(t);
         }
 
-        cout << "Enter left child value of " << p->data << ": " << flush;
+        cout << "Enter Right child value of " << p->data << ": " << flush;
         cin >> x;
         if (x != -1)
         {
@@ -141,25 +142,6 @@ void preorder(Node *p)
     }
 }
 
-void inorder(Node *p)
-{
-    if (p)
-    {
-        inorder(p->lchild);
-        cout << p->data << ", " << flush;
-        inorder(p->rchild);
-    }
-}
-
-void postorder(Node *p)
-{
-    if (p)
-    {
-        postorder(p->lchild);
-        postorder(p->rchild);
-        cout << p->data << ", " << flush;
-    }
-}
 
 int main()
 {
@@ -169,11 +151,7 @@ int main()
     preorder(root);
     cout << endl;
 
-    inorder(root);
-    cout << endl;
 
-    postorder(root);
-    cout << endl;
 
     return 0;
 }
