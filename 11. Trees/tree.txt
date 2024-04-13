@@ -1,0 +1,70 @@
+
+
+
+
+Tree
+    -- Node 
+    -- Root
+    -- Parent
+    -- Child
+    -- Siblings
+    -- Ansestors
+    -- Desendents
+    -- External ( leaf Nodes)
+    -- Internal ( Non - leaf Nodes)
+
+
+Binary Trees
+node {
+    int data;
+    node *leftNode;
+    node *rightNode;
+}
+
+n-array Tree
+node {
+    int data;
+    list<node*> children;
+
+}
+
+
+for creating a simple tree suing this method
+
+class node {
+    public :
+        int data;
+        node* leftchild;
+        node* rightchild;
+
+
+    node(int data){
+        this.data = data;
+        this.leftchild = null;
+        this.rightchild = null;
+    }
+}
+
+
+node *buildTree(node* root){
+    cout<<"Enter the Data: "<<endl;
+    int data;
+    cin>>data;
+    root = new node(data);
+
+    if(data = -1 ){
+        return null;
+    }
+    cout<<"Enter the data for inserting in left "<< data <<endl;
+    root.left = buildTree(root.left);
+    cout<<"Enter the data for inseting in right of <<data <endl;
+    root.right = buildTree(root.right);
+    return root;
+}
+
+
+int main(){
+    node * root = null;
+    // creating tree 
+    root = buildTree(root);
+}
