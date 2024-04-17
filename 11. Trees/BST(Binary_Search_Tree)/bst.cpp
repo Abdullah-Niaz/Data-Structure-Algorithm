@@ -82,11 +82,13 @@ Node* Search(int key){
 int main()
 {
     // Node root = NULL;
-    Insert(10);
-    Insert(5);
-    Insert(20);
-    Insert(8);
-    Insert(30);
+    Insert(15); 
+    Insert(10);  
+    Insert(20); 
+    Insert(7); 
+    Insert(11);
+    Insert(18);
+    Insert(21);
 
     Inorder(root);
     printf("\n");
