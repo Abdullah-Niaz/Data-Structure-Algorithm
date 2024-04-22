@@ -11,7 +11,7 @@ struct Node{
 int NodeHeight(struct Node *p){
     int hl,hr; // height of left and right subtree
     hl = p && p->lchild ? p->lchild->height:0; // left subtree
-    hr = p && p->rchild ? p->rchild->height:0;
+    hr = p && p->rchild ? p->rchild->height:0; // Right subtree
 
     return hl > hr ? hl + 1 : hr + 1;
 };
