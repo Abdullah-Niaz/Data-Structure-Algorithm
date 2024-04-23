@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
+
+
+// prototypes
 int A(int n );
 int B(int n);
 
@@ -11,6 +14,8 @@ int main(){
     return 0;
 }
 
+
+// Defination of functions #6, #7
 int A(int n)
 {
     if (n > 0)
