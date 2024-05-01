@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="w0rHr26z6wYSM1q6PLYU" name="Page-1">
-        <mxGraphModel dx="1131" dy="427" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="1131" dy="267" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -98,7 +98,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="26" value="&lt;ol&gt;&lt;li&gt;make a copy of the pointer which you want to delete so that you can free up that space that is allocated dynamically.&lt;/li&gt;&lt;ol&gt;&lt;li&gt;struct Node *ptr = head;&lt;/li&gt;&lt;/ol&gt;&lt;li&gt;Then move the pointer to the next location&amp;nbsp; -------&amp;nbsp;&lt;/li&gt;&lt;ol&gt;&lt;li&gt;head = head-&amp;gt;next&lt;/li&gt;&lt;/ol&gt;&lt;li&gt;free up the space now&lt;/li&gt;&lt;ol&gt;&lt;li&gt;free(ptr)&lt;/li&gt;&lt;/ol&gt;&lt;/ol&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="190" width="580" height="180" as="geometry"/>
+                    <mxGeometry x="65" y="195" width="580" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="2" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="-43" y="185" width="80" height="40" as="geometry"/>
