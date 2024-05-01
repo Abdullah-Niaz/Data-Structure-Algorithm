@@ -76,7 +76,7 @@ struct Node *insert_at_middle(struct Node *head, int data, int index){
     // Assign data and pointers for the new node
     ptr->data = data;
     ptr->next = p->next;
-    p->next = ptr;
+    p->next = ptr; 
 
     return head;
 }
