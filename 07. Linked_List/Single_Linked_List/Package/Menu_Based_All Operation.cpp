@@ -57,30 +57,30 @@ struct Node *insert_at_start(struct Node *head, int data)
 }
 
 struct Node *insert_at_middle(struct Node *head, int data, int index){
-    struct Node *ptr = new Node;
-    ptr->data = data;
-    ptr->next = NULL;
+    struct Node *ptr = new Node;  // Create a new node
+    struct Node *p = head;         // Pointer to traverse the list
+    int i = 0;
 
-    if (index == 0) {
-        ptr->next = head;
-        head = ptr;
-        return head;
+    // Traverse the list to the node at index - 1
+    while (i != index - 1 && p != NULL) {
+        p = p->next;
+        i++;
     }
 
-    struct Node *temp = head;
-    for (int i = 0; i < index - 1 && temp != NULL; i++) {
-        temp = temp->next;
-    }
-
-    if (temp == NULL) {
+    // Check if the index is out of range
+    if (p == NULL || i != index - 1) {
         cout << "Index out of range!" << endl;
         return head;
     }
 
-    ptr->next = temp->next;
-    temp->next = ptr;
+    // Assign data and pointers for the new node
+    ptr->data = data;
+    ptr->next = p->next;
+    p->next = ptr;
+
     return head;
 }
+
 
 struct Node *insert_at_end(struct Node *head, int data){
     struct Node *ptr = new Node;
