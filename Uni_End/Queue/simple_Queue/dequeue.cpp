@@ -26,7 +26,6 @@ void enqueue(Queue *q,int x){
     }
 };
 
-
 int dequeue(Queue *q){
     int x = -1;
     if(q->front == q->rare){
@@ -45,8 +44,6 @@ int main(){
     q->front = q->rare = -1;
     q->size = 5;
     q->Q = new int[q->size];
-
-
     enqueue(q,5);
     enqueue(q,10);
     enqueue(q,20);
