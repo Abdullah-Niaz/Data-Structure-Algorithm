@@ -7,13 +7,16 @@ void Insertion(int A[], int size){
     for (int i = 0; i < size; i++)
     {
         int key = A[i]; 
+        cout<<"Key: "<<key<<endl;   
         int j = i - 1;
         while ((j >= 0) && (A[j] > key))
         {
-            A[j + 1] = A[j];    
+            A[j + 1] = A[j]; 
+            cout<<"Key: "<<key<<endl;   
             j--; 
         }
         A[j + 1] = key;
+            cout<<"Key: "<<key<<endl;   
     }
 }
 
