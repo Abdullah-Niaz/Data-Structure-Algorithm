@@ -1,0 +1,9 @@
+Function Bubble_Sort(int A[],int size)
+    for (int i = 0; i < size - 1 ; i++) Do 
+        for (int j = 0; j < size - 1 - i ; j++) Do
+            if(A[j] > A[ j + 1 ]) Then 
+                Swap(&A[j], &A[ j + 1]);
+            if End 
+        For End
+    For End
+Function End
