@@ -1,38 +1,54 @@
 #include <iostream>
 using namespace std;
 
-void Swap(int *x, int *y){
-    int temp = *x;
-    *x = *y;
-    *y  = temp;
-};
-
-void bubbleSort(int A[], int size){
-    for (int i = 0; i < size - 1; i++)
+void bubbleSort(int arr[], int n)
+{
+    bool swapped;
+    for (int i = 0; i < n - 1; i++)
     {
-        for (int j = 0; j < size - 1; j++)
+        swapped = false;
+        // Last i elements are already in place
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if(A[j] > A[j + 1 ])   {
-                Swap(&A[j], &A[j+1]);
+            // Swap adjacent elements if they are in the wrong order
+            if (arr[j] > arr[j + 1])
+            {
+                // Perform the swap
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
             }
         }
-    }
-};
 
-int main(){
-    int A[] = {6,5,4,3,2,1};
-    int size = sizeof(A) / sizeof(A[0]);
-    cout<<endl;
-    for (int i = 0; i < size; i++)
-    {
-        cout<<A[i]<<" ";
+        // If no two elements were swapped in the inner loop, the array is already sorted
+        if (!swapped)
+        {
+            break;
+        }
     }
-    cout<<endl;
-    bubbleSort(A,size);
-    for (int i = 0; i < size; i++)
+}
+
+int main()
+{
+    int arr[] = {64, 25, 23,300, 200, 600, 12, 22, 11,2,3,1,15,15};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout<<"Length: "<<n<<endl;
+    cout << "Original array: ";
+    for (int i = 0; i < n; i++)
     {
-        cout<<A[i]<<" ";
+        cout << arr[i] << " ";
     }
-    
+    cout << endl;
+
+    bubbleSort(arr, n);
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
     return 0;
 }
