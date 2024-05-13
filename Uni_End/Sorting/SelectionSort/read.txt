@@ -1,0 +1,11 @@
+Function SelectionSort(A[] , size)
+    for(i = 0; i < size - 1 ; ++i) Do
+        j,k
+        for(j=k=i; j< size ; ++j) Do
+            if(A[j] < A[k]) Then
+                k = j
+            End if 
+        End While 
+        swap(A[i],A[k])
+    End For
+End Function
